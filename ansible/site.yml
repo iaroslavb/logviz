@@ -1,0 +1,31 @@
+---
+- name: install common software
+  hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+
+- name: install webserver
+  hosts: webservers
+  become: yes
+  become_method: sudo
+  roles:
+    - webserver
+
+- name: install mysql
+  hosts: dbservers
+  become: yes
+  become_method: sudo
+  roles:
+    - db
+
+- name: install elastic
+  hosts: elastic
+  become: yes
+  become_method: sudo
+  roles:
+    - elastic
+  
+
+

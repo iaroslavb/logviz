@@ -1,0 +1,41 @@
+---
+webserver_1:
+  name:     "webserver_1"
+  cpus:     2
+  memory:   512
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.200
+
+webserver_2:
+  name:     "webserver_2"
+  cpus:     2
+  memory:   512
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.201
+
+webserver_3:
+  name:     "webserver_3"
+  cpus:     2
+  memory:   512
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.202
+
+dbserver:
+  name:     "dbserver"
+  cpus:     2
+  memory:   512
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.203
+
+elastic:
+  name:     "elastic"
+  cpus:     4
+  memory:   1024
+  gui:      false
+  box:      "ubuntu/xenial64"
+  ip:       192.168.88.204
+
