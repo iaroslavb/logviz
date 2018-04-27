@@ -1,0 +1,6 @@
+---
+# Handlers for common notifications
+
+- name: reload fail2ban
+  service: name=fail2ban state=reloaded
+
