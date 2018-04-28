@@ -1,4 +1,8 @@
 ---
+- name: Include vars from vars/settings.yml
+  include_vars:
+    file: settings.yml
+
 - name: install fail2ban
   apt: name=fail2ban state=latest
 
