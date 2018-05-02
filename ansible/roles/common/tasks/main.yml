@@ -2,3 +2,10 @@
 - name: install htop
   apt: name=htop state=present
 
+- name: enable autocomplete in interactive shell
+  copy:
+    src: bash.bashrc
+    dest: /etc/bash.bashrc
+    owner: root
+    group: root
+    mode: 0755

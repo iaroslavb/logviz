@@ -1,4 +1,16 @@
 ---
 - name: install jre
-  apt: name=openjdk-9-jre-headless state=latest
+  apt: name=openjdk-8-jre-headless state=latest
 
+- name: Add an Apt signing key
+  apt_key:
+    url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+    state: present
+
+- name: install latest apt https transport
+  apt: name=apt-transport-https state=latest
+
+- name: add elasticsearch repo
+  apt_repository:
+    repo: deb https://artifacts.elastic.co/packages/6.x/apt stable main
+    state: present
