@@ -14,3 +14,11 @@
   apt_repository:
     repo: deb https://artifacts.elastic.co/packages/6.x/apt stable main
     state: present
+
+- name: install elasticsearch
+  apt: name=elasticsearch state=latest
+
+- name: elastic search service enabled and started
+  service: name=elasticsearch state=started enabled=yes
+
+
