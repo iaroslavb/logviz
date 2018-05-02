@@ -21,4 +21,16 @@
 - name: elastic search service enabled and started
   service: name=elasticsearch state=started enabled=yes
 
+- name: install kibana
+  apt: name=kibana state=latest
+
+- name: add kibana config
+  copy:
+    src: kibana.yml
+    dest: /etc/kibana/kibana.yml
+    owner: root
+    group: root
+
+- name: kibana service enabled and started
+  service: name=kibana state=started enabled=yes
 
