@@ -1,0 +1,9 @@
+---
+- name: change mysql config 
+  copy:
+    src: mysqld.cnf
+    dest: /etc/mysql/mysql.conf.d/mysqld.cnf
+    owner: root
+    group: root
+    mode: 0755
+  notify: restart mysql

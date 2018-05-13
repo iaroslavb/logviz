@@ -20,7 +20,8 @@
   become: yes
   become_method: sudo
   roles:
-    - db
+    - iaroslavb.mysql
+    - mysql-sample
 
 - name: install elastic
   hosts: elastic
